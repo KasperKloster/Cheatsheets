@@ -185,9 +185,40 @@ class Person {
         
     }
 }
-
+// First Init
 var person = Person("My name", 99)
 person.name
-
+// Second Init (Default)s
 var secondPerson = Person()
 secondPerson.age
+
+/*
+ * Optionals
+*/
+class Author {
+    var name = ""
+}
+
+class BlogPost {
+    // Optional: Title can be nil or is a String.
+    var title:String?
+    var body    = ""
+    // May or may not have a Author object
+    var author:Author?
+}
+// Optional Binding
+let post = BlogPost()
+post.title = "Blog Title"
+// If there is a value in post.title assign it to actualTitle
+if let actualTitle = post.title {
+    print(actualTitle)
+}
+// Forced unwrapping
+print(post.title!)
+// Testing for nil
+if post.title != nil {
+    // We have checked, it's not nil, so it's safe to force unwrap
+    print(post.title!)
+}
+
+
