@@ -167,3 +167,27 @@ class FutureCar : Car {
 let myNewRide = FutureCar()
 myNewRide.drive()
 
+/*
+ * Initializers
+*/
+
+class Person {
+    var name:String = ""
+    var age:Int = 0
+    // The Init method gets calledfirst
+    init(_ name:String, _ age:Int) {
+        // self is the object crated. Name property to name parameters
+        self.name    = name
+        self.age     = age
+    }
+    // We can use multiple inits
+    init(){
+        
+    }
+}
+
+var person = Person("My name", 99)
+person.name
+
+var secondPerson = Person()
+secondPerson.age
